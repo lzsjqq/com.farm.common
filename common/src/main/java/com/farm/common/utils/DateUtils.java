@@ -162,8 +162,18 @@ public class DateUtils {
             quarter = 4;
         }
         return quarter;
-
     }
 
+    /**
+     * 获取季度
+     *
+     * @return
+     */
+    public static int getYear(Date date) {
+        Calendar cal = Calendar.getInstance();
+        cal.setTime(date);
+        return cal.get(Calendar.YEAR);
+
+    }
 
 }
