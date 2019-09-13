@@ -138,4 +138,32 @@ public class DateUtils {
         }
         return false;
     }
+
+    /**
+     * 获取季度
+     *
+     * @return
+     */
+    public static int getQuarter(Date date) {
+        Calendar cal = Calendar.getInstance();
+        cal.setTime(date);
+        int m = cal.get(Calendar.MONTH) + 1;
+        int quarter = 1;
+        if (m >= 1 && m == 3) {
+            quarter = 1;
+        }
+        if (m >= 4 && m <= 6) {
+            quarter = 2;
+        }
+        if (m >= 7 && m <= 9) {
+            quarter = 3;
+        }
+        if (m >= 10 && m <= 12) {
+            quarter = 4;
+        }
+        return quarter;
+
+    }
+
+
 }
