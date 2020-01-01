@@ -1,6 +1,7 @@
 package com.farm.common.utils;
 
 import java.util.Collection;
+import java.util.Map;
 
 /**
  * @description: 是否为空值校验
@@ -26,6 +27,25 @@ public class NullCheckUtils {
      */
     public static boolean isBlank(Collection collection) {
         return !isNotBlank(collection);
+    }
+ /**
+     * 集合校验
+     *
+     * @param map
+     * @return
+     */
+    public static boolean isNotBlank(Map map) {
+        return map != null && !map.isEmpty();
+    }
+
+    /**
+     * 集合校验
+     *
+     * @param map
+     * @return
+     */
+    public static boolean isBlank(Map map) {
+        return !isNotBlank(map);
     }
 
     /**
