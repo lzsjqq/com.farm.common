@@ -71,6 +71,19 @@ public class DateUtils {
         return result;
     }
 
+    public static Date dateToDate(Date date, String pattern) throws Exception {
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat(pattern);
+        String result;
+        try {
+            result = simpleDateFormat.format(date);
+        } catch (Exception e) {
+            throw new Exception(e.getMessage());
+        }
+        return stringToDate(result,pattern);
+    }
+
+
+
     /**
      * @param date
      * @param day  想要获取的日期与传入日期的差值 比如想要获取传入日期前四天的日期 day=-4即可
