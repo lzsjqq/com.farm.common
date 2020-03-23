@@ -28,6 +28,7 @@ public class NullCheckUtils {
     public static boolean isBlank(Collection collection) {
         return !isNotBlank(collection);
     }
+
     /**
      * map校验
      *
@@ -76,6 +77,26 @@ public class NullCheckUtils {
      */
     public static boolean isNotBlank(String[] strs) {
         return strs != null && strs.length > 0;
+    }
+
+    /**
+     * Object
+     *
+     * @param obj
+     * @return
+     */
+    public static boolean isBlank(Object obj) {
+        return null == obj;
+    }
+
+    /**
+     * Object
+     *
+     * @param obj
+     * @return
+     */
+    public static boolean isNotBlank(Object obj) {
+        return !isBlank(obj);
     }
 
 
