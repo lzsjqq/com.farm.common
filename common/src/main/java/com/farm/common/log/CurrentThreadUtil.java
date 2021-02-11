@@ -15,7 +15,7 @@ public class CurrentThreadUtil {
     }
 
     public static void setCurrentThreadId() {
-        threadLocal.set(generateId());
+        Thread.currentThread().setName(generateId());
     }
 
     public static void getCurrentThreadId() {
