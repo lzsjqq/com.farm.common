@@ -1,7 +1,4 @@
-package com.farm.common.utils;
-
-import java.io.PrintWriter;
-import java.io.StringWriter;
+package com.farm.common.log;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
