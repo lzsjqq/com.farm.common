@@ -100,4 +100,33 @@ public class NullCheckUtils {
     }
 
 
+    /**
+     * objs
+     *
+     * @param objs
+     * @return
+     */
+    public static boolean isHaveBlank(Object... objs) {
+        if (NullCheckUtils.isBlank(objs)) {
+            return true;
+        }
+        for (Object obj : objs) {
+            if (isBlank(obj)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    /**
+     * objs
+     *
+     * @param objs
+     * @return
+     */
+    public static boolean isNotHaveBlank(Object... objs) {
+        return isHaveBlank(objs);
+    }
+
+
 }
